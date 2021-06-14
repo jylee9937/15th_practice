@@ -19,13 +19,13 @@ public class TextFileTest
         staff[2] = new Employee("Tony Tester", 40000, 1990, 3, 15);
 
         // save all employee records to the file employee.dat
-        try (PrintWriter out = new PrintWriter("employee16.dat", "UTF-16"))
+        try (PrintWriter out = new PrintWriter("employee.dat", "UTF-8"))
         {
             writeData(staff, out);
         }
 
         // retrieve all records into a new array
-        try (Scanner in = new Scanner(new FileInputStream("employee.dat"), "UTF-16"))
+        try (Scanner in = new Scanner(new FileInputStream("employee16.dat"), "UTF-16"))
         {
             Employee[] newStaff = readData(in);
 
